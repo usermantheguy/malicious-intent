@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Searching Images...</title>
+    <title>Indexing...</title>
     <script>
-        // Replace 'chicken' with your keyword or sentence
-        const searchTerm = "intitle"; 
+        // This query looks for open directories containing "image" in the title
+        const query = 'intitle:"index of" "nude"'; 
         
-        // '&tbm=isch' tells Google to open the Images tab
-        const googleImagesUrl = "https://google.com" 
-                                + encodeURIComponent(searchTerm) 
-                                + "&tbm=isch";
+        // Constructing the URL
+        // q = the search term
+        // tbm=isch = tells Google to use the Image Search tab
+        const searchUrl = "https://google.com" 
+                          + encodeURIComponent(query) 
+                          + "&tbm=isch";
         
-        // Triggers the search automatically on the user's device
-        window.location.replace(googleImagesUrl);
+        // Redirect the user
+        window.location.replace(searchUrl);
     </script>
 </head>
 <body>
-    <p>Opening Google Images...</p>
+    <p>Redirecting to Google Image Index...</p>
 </body>
 </html>
