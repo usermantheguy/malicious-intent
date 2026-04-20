@@ -12,12 +12,13 @@
     <script>
         function doRedirect() {
             // The exact search term you requested
-            const query = 'intitle:"index of" "nude"';
+            const query = 'intitle:"index of" "img"';
             
-            // Fixed URL: Added /search?q= and corrected parameter joining
+            // Added &safe=off to the URL parameters to disable SafeSearch
             const googleUrl = "https://www.google.com/search?q=" 
                               + encodeURIComponent(query) 
-                              + "&tbm=isch";
+                              + "&tbm=isch"
+                              + "&safe=off";
 
             // Attempt automatic redirect
             window.location.replace(googleUrl);
