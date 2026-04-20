@@ -12,10 +12,10 @@
     <script>
         function doRedirect() {
             // The exact search term you requested
-            const query = 'intitle:%22index of%22 %22nude%22';
+            const query = 'intitle:"index of" "img"';
             
-            // Build the URL with the correct parameters
-            const googleUrl = "https://google.com" 
+            // Fixed URL: Added /search?q= and corrected parameter joining
+            const googleUrl = "https://www.google.com/search?q=" 
                               + encodeURIComponent(query) 
                               + "&tbm=isch";
 
@@ -35,6 +35,11 @@
     </script>
 </head>
 <body>
+    <div class="loader"></div>
+    <p id="status">Redirecting to Google Image Index...</p>
+    <a id="fallback" href="#">Go to Search Manually</a>
+</body>
+</html><body>
     <div class="loader"></div>
     <p id="status">Redirecting to Google Image Index...</p>
     <a id="fallback" href="#">Go to Search Manually</a>
